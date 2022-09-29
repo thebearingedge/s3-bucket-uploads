@@ -17,8 +17,8 @@ const s3 = new S3({
 const storage = multerS3({
   s3: s3,
   acl: 'public-read',
-  bucket: process.env.AWS_S3_BUCKET,
   // ☝️ so that anyone with a url can view the file
+  bucket: process.env.AWS_S3_BUCKET,
   contentType: multerS3.AUTO_CONTENT_TYPE,
   // ☝️ so that when the file is downloaded,
   // the proper Content-Type header is set in the response
